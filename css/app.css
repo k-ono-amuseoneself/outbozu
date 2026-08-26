@@ -302,6 +302,22 @@ button:disabled {
     background: #fff0f0;
 }
 
+.day-heading.holiday {
+    color: #a44141;
+    background: #fff0f0;
+}
+
+.holiday-name {
+    display: block;
+    margin-top: 2px;
+    overflow: hidden;
+    color: #a44141;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .day-heading.today {
     color: #0875c1;
     background: #eaf3f7;
@@ -348,6 +364,10 @@ button:disabled {
 }
 
 .schedule-day.weekend {
+    background: #fffafa;
+}
+
+.schedule-day.holiday {
     background: #fffafa;
 }
 
