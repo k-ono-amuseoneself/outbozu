@@ -42,6 +42,7 @@ export function initialize(popup) {
         y = Math.max(top + margin, Math.min(y, top + height - bounds.height - margin));
         popup.style.left = `${(x - bounds.left) / zoom}px`;
         popup.style.top = `${(y - bounds.top) / zoom}px`;
+        popup.style.visibility = "visible";
     }
 
     function schedule() {
@@ -52,7 +53,8 @@ export function initialize(popup) {
         if (!popup.contains(event.target)) schedule();
     }
 
-    const observer = new ResizeObserver(schedule);
+    // 内容の高さが変わった時も、描画前に位置を補正する。
+    const observer = new ResizeObserver(place);
     observer.observe(popup);
     window.addEventListener("resize", schedule);
     window.addEventListener("scroll", onScroll, true);

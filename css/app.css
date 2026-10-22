@@ -391,10 +391,11 @@ button:disabled {
     position: fixed;
     inset: 0;
     z-index: 100;
-    background: rgba(24, 43, 57, 0.08);
+    background: rgba(24, 43, 57, 0.22);
 }
 
 .event-popup {
+    visibility: hidden;
     position: fixed;
     top: 50%;
     left: 50%;
